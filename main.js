@@ -32,12 +32,26 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt("Choose: ");
+function game(playerSelection) {
         let result = playRound(playerSelection, getComputerChoice());
         console.log(result);
-    }
 }
 
-game();
+//Create event listeners for rock paper and scissors buttons
+const rockButton = document.querySelector('#rock');
+rockButton.addEventListener('click', () => {
+    let playerSelection = 'rock';
+    game(playerSelection);
+});
+
+const paperButton = document.querySelector('#paper');
+paperButton.addEventListener('click', () => {
+    let playerSelection = 'paper';
+    game(playerSelection);
+});
+
+const scissorsButton = document.querySelector('#scissors');
+scissorsButton.addEventListener('click', () => {
+    let playerSelection = 'scissors';
+    game(playerSelection);
+});
