@@ -1,3 +1,5 @@
+const resultsDiv = document.querySelector('#results');
+
 function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
     let computerChoice;
@@ -34,7 +36,7 @@ function playRound(playerSelection, computerSelection) {
 
 function game(playerSelection) {
         let result = playRound(playerSelection, getComputerChoice());
-        console.log(result);
+        resultsDiv.textContent = result;
 }
 
 //Create event listeners for rock paper and scissors buttons
