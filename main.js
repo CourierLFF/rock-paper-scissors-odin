@@ -1,6 +1,8 @@
 const resultsDiv = document.querySelector('#results');
 const playerScoreP = document.querySelector('#playerScore');
+const playerChoiceP = document.querySelector('#playerChoice');
 const computerScoreP = document.querySelector('#computerScore');
+const computerChoiceP = document.querySelector('#computerChoice')
 
 let playerScore = 0;
 let computerScore = 0;
@@ -17,6 +19,7 @@ function getComputerChoice() {
     else {
         computerChoice = 'scissors';
     }
+    computerChoiceP.textContent = `${computerChoice}`
     return computerChoice;
 }
 
@@ -78,17 +81,20 @@ function game(playerSelection) {
 const rockButton = document.querySelector('#rock');
 rockButton.addEventListener('click', () => {
     let playerSelection = 'rock';
+    playerChoiceP.textContent = `${playerSelection}`
     game(playerSelection);
 });
 
 const paperButton = document.querySelector('#paper');
 paperButton.addEventListener('click', () => {
     let playerSelection = 'paper';
+    playerChoiceP.textContent = `${playerSelection}`
     game(playerSelection);
 });
 
 const scissorsButton = document.querySelector('#scissors');
 scissorsButton.addEventListener('click', () => {
     let playerSelection = 'scissors';
+    playerChoiceP.textContent = `${playerSelection}`
     game(playerSelection);
 });

@@ -11,12 +11,22 @@
         <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
     </head>
     <body>
-        <button type="button" id="rock">Rock</button>
-        <button type="button" id="paper">Paper</button>
-        <button type="button" id="scissors">Scissors</button>
-        <div id="results"></div>
-        <p id="playerScore"></p>
-        <p id="computerScore"></p>
+        <div class="info_container">
+            <div id="results"></div>
+            <div class="playerDisplay">
+                <p id="playerChoice"></p>
+                <p id="playerScore"></p>
+            </div>
+            <div class="computerDisplay">
+                <p id="computerChoice"></p>
+                <p id="computerScore"></p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button type="button" id="rock">Rock</button>
+            <button type="button" id="paper">Paper</button>
+            <button type="button" id="scissors">Scissors</button>
+        </div>
     </body>
     <script src="main.js"></script>
 </html>

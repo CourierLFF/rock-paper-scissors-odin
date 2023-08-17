@@ -1,3 +1,15 @@
 * {
     font-family: "Gochi Hand", sans-serif;
 }
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+#rock,
+#paper,
+#scissors {
+    font-size: 48px;
+}
